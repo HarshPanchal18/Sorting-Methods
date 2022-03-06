@@ -1,3 +1,10 @@
+/*
+The Pigeonhole sort is a sorting technique that is used when the range of keys is relatively small.
+An array of pigeonholes (buckets, chunks of RAM) is reserved for each possible key value.
+The records from the unsorted list are scanned and copied into their respective pigeonholes based on their key values.
+Then, the contents of the pigeonholes are copied in sequence to the final destination.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -43,5 +50,5 @@ int main()
         }
     }
 
-    printf("\nMaximum: %d\nMinimum: %d\n", max, min);
+    printf("\nMaximum: %d\nMinimum: %d\n", max, min); //optional
 }
