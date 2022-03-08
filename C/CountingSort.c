@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAX 10
+
 int getMax(int a[], int n)
 {
     int max = a[0];
@@ -43,9 +43,10 @@ void printArr(int a[], int n)
 
 int main(void)
 {
-    int a[MAX], n;
+    int n;
     printf("\nEnter the number of elements: ");
     scanf("%d", &n);
+    int a[n];
 
     printf("\nEnter %d elements\n", n);
     for (int i = 0; i < n; i++)
