@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAX 5
+
 void Selection(int list[], int i, int j, int size, int flag)
 {
     int temp;
@@ -24,14 +24,17 @@ void Selection(int list[], int i, int j, int size, int flag)
 
 int main(void)
 {
-    int list[MAX], temp, i, j;
+    printf("\nEnter the number of elements: ");
+    int n;
+    scanf("%d", &n);
+    int list[n];
 
-    printf("\nEnter %d Elements: \n", MAX);
-    for (i = 0; i < MAX; i++)
+    printf("\nEnter %d Elements: \n", n);
+    for (int i = 0; i < n; i++)
         scanf("%d", &list[i]);
 
-    Selection(list, 0, 0, MAX, 1);
+    Selection(list, 0, 0, n, 1);
 
-    for (i = 0; i < MAX; i++)
+    for (int i = 0; i < n; i++)
         printf("%d ", list[i]);
 }
