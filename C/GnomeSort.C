@@ -11,10 +11,10 @@
 int main(void)
 {
     int i, no;
-    printf("\nEnter the number of elements(MAXIMUM %d): ", MAX);
+    printf("\nEnter the number of elements: ");
     scanf("%d", &no);
     int a[no];
-    
+
     printf("\nEnter %d elements: \n", no);
     for (i = 0; i < no; i++)
         scanf("%d", &a[i]);

@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <conio.h>
 
+void Swap(int *a, int *b)
+{
+	/*int temp = *a;
+	 *a = *b;
+	 *b = temp;*/
+	*a = (*a + *b) - (*b = *a);
+}
+
 int main(void)
 {
 	int c, no;
@@ -16,26 +24,24 @@ int main(void)
 
 	do
 	{
-		for (int i = 0; i < n - 1; i++)
+		for (int i = 0; i < n - 1; i++) // Go forward
 		{
 			if (data[i] > data[i + 1])
 			{
-				data[i] = data[i] + data[i + 1];
-				data[i + 1] = data[i] - data[i + 1];
-				data[i] = data[i] - data[i + 1];
+				Swap(&data[i], &data[i + 1]);
 			}
 		}
 		n--;
-		for (int i = no, c = 0; i > no; i--)
+
+		for (int i = no, c = 0; i > no; i--) // Go backward
 		{
 			if (data[i] < data[i + 1])
 			{
-				data[i] = data[i] + data[i - 1];
-				data[i - 1] = data[i] - data[i - 1];
-				data[i] = data[i] - data[i - 1];
+				Swap(&data[i], &data[i + 1]);
 			}
 		}
 		c++;
+
 	} while (n != 0 && c != 0);
 
 	printf("\nThe sorted elements are: ");

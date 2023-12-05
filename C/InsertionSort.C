@@ -8,17 +8,19 @@ int main()
 	int arr[MAX], i, j, k, n;
 	printf("\nEnter the number of elements (Maximum: 10): ");
 	scanf("%d", &n);
+
 	for (i = 0; i < n; i++)
 	{
 		printf("\nEnter %d element : ", i + 1);
 		scanf("%d", &arr[i]);
 	}
+
 	printf("\nUnsorted list is: ");
 	for (i = 0; i < n; i++)
-	{
 		printf("%d  ", arr[i]);
-	}
+
 	printf("\n");
+
 	for (j = 1; j < n; j++)
 	{
 		k = arr[j];
@@ -28,6 +30,7 @@ int main()
 		}
 		arr[i + 1] = k;
 	}
+
 	printf("\nSorted list is: ");
 	for (i = 0; i < n; i++)
 		printf("%d  ", arr[i]);

@@ -16,6 +16,7 @@ int main()
 	printf("\nUnsorted list: ");
 	for (i = 0; i < n; i++)
 		printf("%d  ", arr[i]);
+
 	for (size = 1; size < n; size = size * 2)
 	{
 		l1 = 0;
@@ -52,9 +53,11 @@ int main()
 		for (i = 0; i < n; i++)
 			printf("%2d ", arr[i]);
 	}
+
 	printf("\n\nSorted list is: ");
 	for (i = 0; i < n; i++)
 		printf("%2d ", arr[i]);
+
 	getch();
 	return 0;
 }

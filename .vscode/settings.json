@@ -1,0 +1,23 @@
+{
+    "files.associations": {
+        "BeadSort.C": "cpp",
+        "BubbleSort.C": "cpp",
+        "CocktailSort.C": "cpp",
+        "CockTailSort2.C": "cpp",
+        "GnomeSort.C": "cpp",
+        "HeapSort2.C": "cpp",
+        "InsertionSort.C": "cpp",
+        "MatrixSort.C": "cpp",
+        "Merge2SortedArray.C": "cpp",
+        "MergeSort2.C": "cpp",
+        "MergeSort3.C": "cpp",
+        "MergeSort4.C": "cpp",
+        "OddEvenSort.C": "cpp",
+        "PanCakeSort.C": "cpp",
+        "PigeonHoleSort.C": "cpp",
+        "QuickSort.C": "cpp",
+        "QuickSort2.C": "cpp",
+        "SelectionSort.C": "cpp",
+        "ShellSort.C": "cpp"
+    }
+}

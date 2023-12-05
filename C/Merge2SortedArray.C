@@ -8,20 +8,24 @@ int main()
 
 	printf("Enter the number of elements in list1: ");
 	scanf("%d", &max1);
+
 	printf("\nGive the element in sorted order only: \n");
 	for (i = 0; i < max1; i++)
 	{
 		printf("\n Enter element %d : ", i + 1);
 		scanf("%d", &arr1[i]);
 	}
+
 	printf("\nEnter the number of elements in list2: ");
 	scanf("%d", &max2);
+
 	printf("\nGive the element in sorted order only: \n");
 	for (i = 0; i < max2; i++)
 	{
 		printf("\nEnter element %d : ", i + 1);
 		scanf("%d", &arr2[i]);
 	}
+
 	i = 0;
 	j = 0;
 	k = 0;

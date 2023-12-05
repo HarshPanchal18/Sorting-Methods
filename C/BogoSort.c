@@ -15,8 +15,8 @@
 
 int isSorted(int *a, int n)
 {
-    while (--n >= 1)
-        if (a[n] < a[n - 1])
+    while (--n >= 1)         // Loop through all of the elements
+        if (a[n] < a[n - 1]) // and compare them to each other until it finds one that's less than another element.
             return 0;
     return 1;
 }
@@ -24,7 +24,7 @@ int isSorted(int *a, int n)
 void shuffle(int *a, int n)
 {
     for (int i = 0; i < n; i++)
-    {
+    { // Shuffle the values using random number of element.
         int t = a[i];
         int temp = rand() % n;
         a[i] = a[temp];
@@ -43,14 +43,14 @@ int main(void)
     int n;
     printf("\nEnter the number of elements: ");
     scanf("%d",&n);
-    
+
     int no[n];
     printf("\nEnter %d elements:\n",n);
     for (int i = 0; i < n; i++)
         scanf("%d", &no[i]);
-    
+
     BogoSort(no, n);
-    
+
     printf("\nSorted list:\n");
     for (int i = 0; i < n; i++)
         printf("%d ", no[i]);

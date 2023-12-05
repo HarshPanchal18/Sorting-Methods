@@ -1,32 +1,51 @@
 #include <stdio.h>
 #define MAX 5
 
-void StoogeSort(int a[], int i, int j)
+int array[] = {7, 85, 41, 6, 3, 7, 1};
+int n = sizeof(array) / sizeof(array[0]);
+
+void swap(int *a, int *b)
 {
-    int temp, k;
-    if (a[i] > a[j])
-        temp = a[i], a[i] = a[j], a[j] = temp;
+    *a = (*a + *b) - (*b = *a);
+}
+
+void StoogeSort(int a[], int i, int j, int flag)
+{
+    //int temp, k;
+    if (!flag)
+    {
+        if (a[i] > a[j])
+            swap(&a[i], &a[j]);
+    }
+    else if (a[i] < a[j])
+        swap(&a[i], &a[j]);
 
     if ((i + 1) >= j)
         return;
 
-    k = (int)((j - i + 1) / 3);
-    StoogeSort(a, i, j - k);
-    StoogeSort(a, i + k, j);
-    StoogeSort(a, i, j - k);
+    int k = (int)((j - i + 1) / 3);
+    StoogeSort(a, i, j - k, flag);
+    StoogeSort(a, i + k, j, flag);
+    StoogeSort(a, i, j - k, flag);
 }
 
 int main(void)
 {
     int a[MAX], i;
 
-    printf("\nEnter %d values:\n", MAX);
+    /*printf("\nEnter %d values:\n", MAX);
     for (i = 0; i < MAX; i++)
-        scanf("%d", &a[i]);
+        scanf("%d", &a[i]);*/
 
-    StoogeSort(a, 0, MAX - 1);
+    StoogeSort(array, 0, n - 1, 0);
 
     printf("\nSorted values:");
-    for (i = 0; i < MAX; i++)
-        printf("\t%d", a[i]);
+    for (i = 0; i < n; i++)
+        printf("\t%d", array[i]);
+
+    StoogeSort(array, 0, n - 1, 1);
+
+    printf("\nSorted values:");
+    for (i = 0; i < n; i++)
+        printf("\t%d", array[i]);
 }

@@ -7,6 +7,7 @@ int main(void)
 	int arr[MAX], i, j, k, temp, n, x;
 	printf("Enter the total number of elements: ");
 	scanf("%d", &n);
+
 	for (i = 0; i < n; i++)
 	{
 		printf("\nEnter element %d: ", i + 1);
@@ -43,5 +44,6 @@ int main(void)
 	printf("\nSorted list is: \n");
 	for (i = 0; i < n; i++)
 		printf("%d  ", arr[i]);
+
 	getch();
 }

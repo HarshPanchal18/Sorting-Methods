@@ -19,8 +19,7 @@ void selectionSort(int arr[], int size)
 
 void swap(int *a, int *b)
 {
-	int temp;
-	temp = *a;
+	int temp = *a;
 	*a = *b;
 	*b = temp;
 }
@@ -28,20 +27,20 @@ void swap(int *a, int *b)
 int main()
 {
 	int arr[10], i, size;
-	//clrscr();
+
 	printf("\nHow many numbers you want to sort??: ");
 	scanf("%d", &size);
+
 	printf("\nEnter %d numbers: \n", size);
 	for (i = 0; i < size; i++)
-	{
 		scanf("%d", &arr[i]);
-	}
+
 	selectionSort(arr, size);
+
 	printf("\nSorted array: ");
 	for (i = 0; i < size; i++)
-	{
 		printf("%d ", arr[i]);
-	}
+
 	getch();
 	return 0;
 }
